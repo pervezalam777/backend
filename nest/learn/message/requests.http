@@ -1,0 +1,34 @@
+### List all messages
+GET http://localhost:6000/messages
+
+
+### Create a new messages proper request
+POST http://localhost:6000/messages
+Content-Type: application/json
+
+{
+  "content": "hi there"
+}
+
+
+### Create a new messages bed request 1
+POST http://localhost:6000/messages
+Content-Type: application/json
+
+{
+  "greetings": "hi there"
+}
+
+
+### Create a new messages bed request 1
+POST http://localhost:6000/messages
+Content-Type: application/json
+
+{
+  "content": { "a": 10 }
+}
+
+
+
+### Get a particular message
+GET http://localhost:6000/messages/1
