@@ -7,7 +7,7 @@ POST http://localhost:6000/messages
 Content-Type: application/json
 
 {
-  "content": "hi there"
+  "content": "hi there again"
 }
 
 
@@ -31,4 +31,7 @@ Content-Type: application/json
 
 
 ### Get a particular message
-GET http://localhost:6000/messages/1
+GET http://localhost:6000/messages/1676646504208
+
+### Get a particular message whic does not exists 
+GET http://localhost:6000/messages/123
