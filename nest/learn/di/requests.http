@@ -1,0 +1,5 @@
+### Compute 
+GET http://localhost:3000/computer/compute
+
+### Get data
+GET http://localhost:3000/computer/data
