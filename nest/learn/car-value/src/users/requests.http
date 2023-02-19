@@ -1,0 +1,35 @@
+### Valid create user request 
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "test@123"
+}
+
+### Invalid create user request email missing
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "userId": "test@example.com",
+  "password": "test@123"
+}
+
+### Invalid create user request password missing
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "userRole": "test@123"
+}
+
+### Invalid create user request email and password missing
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+  "userId": "test@example.com",
+  "userRole": "test@123"
+}
