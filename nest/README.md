@@ -42,6 +42,17 @@
 # Pipes
 ## List of pipes
 ### ValidationPipe
+```typescript
+ ...
+ app.useGlobalPipes(
+    new ValidationPipe({
+      // Whitelist true means all the extra properties send by client
+      // in the body will be stripped off (add some level of security)
+      whitelist: true 
+    })
+ ...
+```
+For example CreateUserDto require on email and password if user add one more property (e.g. userRole) to request body. It will be remove the 'userRole' from the body and send the dto object with two required property. 
 
 <br /><br />
 
@@ -120,4 +131,23 @@ export class UserService {
   }
 }
 ```
+
+# Nest work well with TypeORM and Mongoose
+
+# TypeORM
+## How to add entity in the system
+- Create an entity file in the module it should belongs to. (e.g. `nest\learn\car-value\src\reports\report.entity.ts`)
+- Create a class list all the properties in it that entity will have. (e.g. `nest\learn\car-value\src\reports\report.entity.ts`)
+- Connect the entity to its parent module. This create a repository (e.g. `nest\learn\car-value\src\reports\reports.module.ts`)
+- Connect the entity to the root connection (e.g. `nest\learn\car-value\src\app.module.ts`)
+
+## synchronize: true
+In `nest\learn\car-value\src\app.module.ts` synchronize flag set to true which is `only for development` purpose, it will automatically update, alter, delete database tables when it detect change in entity files
+
+## [Repository API](https://typeorm.io/repository-api)
+- `create()`: makes a new instance of an entity, but does not persist it to the DB
+- `save()`: Add or updates a record to the DB
+- `find()`: Runs a query and returns a list of entities
+- `findOne()`: Run a query, returning the first record matching the search criteria
+- `remove()`: Remove a record from the DB
 
