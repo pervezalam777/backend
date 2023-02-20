@@ -151,3 +151,10 @@ In `nest\learn\car-value\src\app.module.ts` synchronize flag set to true which i
 - `findOne()`: Run a query, returning the first record matching the search criteria
 - `remove()`: Remove a record from the DB
 
+## Create vs Save
+- `Create`: creates repository entity instance in memory
+- `Save`: Actually save the data into the database
+
+### create gives you some advantages where 
+- Auto generated id can be use
+- TypeORM provide hooks that can be use for logging (e.g. `AfterInsert()` )
