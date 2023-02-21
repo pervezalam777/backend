@@ -146,10 +146,12 @@ In `nest\learn\car-value\src\app.module.ts` synchronize flag set to true which i
 
 ## [Repository API](https://typeorm.io/repository-api)
 - `create()`: makes a new instance of an entity, but does not persist it to the DB
-- `save()`: Add or updates a record to the DB
+- `save()`: use entity to add or updates a record to the DB
 - `find()`: Runs a query and returns a list of entities
 - `findOne()`: Run a query, returning the first record matching the search criteria
-- `remove()`: Remove a record from the DB
+- `remove()`: use entity to remove a record from the DB
+- `update()`:
+- `insert()`:
 
 ## Create vs Save
 - `Create`: creates repository entity instance in memory
@@ -158,3 +160,8 @@ In `nest\learn\car-value\src\app.module.ts` synchronize flag set to true which i
 ### create gives you some advantages where 
 - Auto generated id can be use
 - TypeORM provide hooks that can be use for logging (e.g. `AfterInsert()` )
+
+
+
+
+# Exception filters ??
