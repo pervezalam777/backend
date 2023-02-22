@@ -178,3 +178,17 @@ class CustomInterceptor {
 - `intercept` : method is called automatically (by nest)
 - `context: ExecutionContext`: Information on the incoming request
 - `next: CallHandler`: Kind of reference to the request handler in our controller
+
+# Class validation interface
+```typescript
+interface ClassConstructor {
+  new (...args: any[]):{}
+}
+
+class Cal {
+
+}
+
+const assignClass: ClassConstructor = Cal; // valid
+const assignString: ClassConstructor = "some string" // Invalid
+```
