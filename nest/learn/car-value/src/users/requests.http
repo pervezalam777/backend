@@ -35,7 +35,7 @@ Content-Type: application/json
 }
 
 ### Find by id
-GET http://localhost:3000/auth/4
+GET http://localhost:3000/auth/2
 
 
 ### Find by email id
