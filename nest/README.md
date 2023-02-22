@@ -163,5 +163,18 @@ In `nest\learn\car-value\src\app.module.ts` synchronize flag set to true which i
 
 
 
-
 # Exception filters ??
+
+# Interceptor
+- Interceptor can be placed to intercept request and response
+- Interceptor can be applied to method level and class level
+
+## Interceptor structure
+```typescript
+class CustomInterceptor {
+  intercept(context: ExecutionContext, next: CallHandler)
+}
+``` 
+- `intercept` : method is called automatically (by nest)
+- `context: ExecutionContext`: Information on the incoming request
+- `next: CallHandler`: Kind of reference to the request handler in our controller
