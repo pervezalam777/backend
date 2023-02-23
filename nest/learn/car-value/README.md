@@ -31,6 +31,9 @@ $ npm i @nestjs/typeorm typeorm sqlite3
 
 ## Install class validator
 $ npm i class-validator class-transformer
+
+## install cookie-session and type for the same
+$ npm i cookie-session @types/cookie-session
 ```
 
 ## Installation

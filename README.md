@@ -40,3 +40,9 @@ Connection: close
 Content-Length: 0
 
 ```
+
+# Rainbow Table Attack
+- Some malicious person get all the most popular password list across the world (e.g. `password`, `picture`, `hithere`, `test`, `mypassword`, ...)
+- They could create a hash or the most popular password ahead of time
+- If they get hold of the database they could compare hash against the table and could figure out the password.
+- **adding salt in hashing makes it more difficult for rainbow table attack

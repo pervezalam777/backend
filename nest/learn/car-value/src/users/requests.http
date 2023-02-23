@@ -3,7 +3,7 @@ POST http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email": "test_one@example.com",
+  "email": "test_three@example.com",
   "password": "test@123"
 }
 
@@ -52,3 +52,30 @@ Content-Type: application/json
 {
   "password": "newPassword123"
 }
+
+
+### Sign in user with valid user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test_three@example.com",
+  "password": "test@123"
+}
+
+
+### Sign in user with invalid user
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email": "test_three@example.com",
+  "password": "test@321"
+}
+
+### Who am i
+GET http://localhost:3000/auth/whoami
+
+### sign out
+GET http://localhost:3000/auth/signout
+
